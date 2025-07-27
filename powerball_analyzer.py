@@ -274,7 +274,7 @@ def main():
         max_draws = len(full_data)
         num_drawings = st.sidebar.slider(
             "Number of Past Drawings to Analyze", 
-            10, max_draws, min(1000, max_draws), 100
+            100, max_draws, min(1000, max_draws), 100
         )
         data = full_data.head(num_drawings)
         st.sidebar.metric("Analyzing Recent Draws", f"{len(data):,}")
